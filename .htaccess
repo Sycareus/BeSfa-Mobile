@@ -1,0 +1,5 @@
+DirectoryIndex index.php index.html index.phtml /erreurs/403.php
+RewriteEngine On
+RewriteCond "%{REQUEST_FILENAME}" "!-f"
+RewriteRule ^([^/]*)$ /index.php?page=$1 [L]
+ErrorDocument 404 /index.php
