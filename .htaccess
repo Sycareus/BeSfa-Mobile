@@ -1,4 +1,5 @@
 DirectoryIndex index.php index.html index.phtml /erreurs/403.php
 RewriteEngine On
+RewriteRule ^/api/(.+)/(\d+)/?$  api.php?rquest=$1&count=$2 [NC,L]
 RewriteRule ^([^/]*)$ /index.php?page=$1 [L]
 ErrorDocument 404 /index.php
